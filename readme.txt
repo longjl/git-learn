@@ -59,6 +59,8 @@ $ git checkout -- readme.txt  // --很重要，没有--，就变成了"创建一
 把暂存区的修改撤销掉：
 $ git reset HEAD reaeme.txt
 
+删除文件：
+
 
 
 
