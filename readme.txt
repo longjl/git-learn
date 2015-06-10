@@ -36,6 +36,12 @@ Initialized empty Git repository in d:/project/temp/.git/
 $ add readme.txt
 $ commit -m "add readme file"
 
+查看文件状态：
+$ git stauts
+
+查看文件修改：
+$ git diff
+
 
 
 
