@@ -31,7 +31,6 @@ $ pwd				//显示当前目录
 $ git init          //初始化版本库
 Initialized empty Git repository in d:/project/temp/.git/
 
-
 添加文件到版本库:
 $ add readme.txt
 $ commit -m "add readme file"
@@ -41,6 +40,15 @@ $ git stauts
 
 查看文件修改：
 $ git diff
+
+查看版本历史：
+$ git log
+
+回退版本：
+$ git reset --hard b39ef...  //版本号没必要写全，前几位就可以了，Git会自动去找
+
+查看git每一次命令：
+$ git reflog
 
 
 
