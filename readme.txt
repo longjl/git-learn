@@ -1,3 +1,5 @@
+1、在线地址
+
 git中文网站：
 http://www.git-scm.com/
 
@@ -9,6 +11,42 @@ http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b0
 
 github for windows：
 https://help.github.com/articles/getting-started-with-github-for-windows/
+
+
+2、git学习
+
+windows下安装git：
+http://msysgit.github.io/
+
+配置用户名和邮箱：
+$ git config --global user.name "your name"				// --global表示你这台机器上的所有git仓库都会使用这个配置
+$ git config --global user.email "email@example.com"
+
+
+创建版本库：
+$ mkdir temp		//创建空目录
+$ cd temp			//切换目录
+$ pwd				//显示当前目录
+
+$ git init          //初始化版本库
+Initialized empty Git repository in d:/project/temp/.git/
+
+
+添加文件到版本库:
+$ add readme.txt
+$ commit -m "add readme file"
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
