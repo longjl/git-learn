@@ -56,8 +56,8 @@ git diff HEAD -- readme.txt
 丢弃工作区的修改(就是让这个文件回到最近一次git commit或git add时的状态)：
 $ git checkout -- readme.txt  // --很重要，没有--，就变成了"创建一个新分支"的命令
 
-
-
+把暂存区的修改撤销掉：
+$ git reset HEAD reaeme.txt
 
 
 
