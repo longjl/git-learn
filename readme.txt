@@ -51,8 +51,10 @@ $ git reset --hard b39ef...  //版本号没必要写全，前几位就可以了�
 $ git reflog
 
 
+test...
+test...
 
-
+test...
 
 
 
