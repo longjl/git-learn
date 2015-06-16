@@ -105,6 +105,13 @@ $ git branch	//git branch命令会列出所有分支，当前分支前面会标�
 
 合并分支：
 $ git merge dev //git merge命令用于合并指定分支到当前分支
+//通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+
+合并分支：
+$ git merge --no-ff -m "merge with no-ff" dev //注意--no-ff参数，表示禁用Fast forward。
+
+
+//合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
 
 查看分支合并情况：
 $ git log --graph --pretty=oneline --abbrev-commit 
@@ -117,3 +124,6 @@ $ git branch -d dev
 
 删除远程分支：
 $ git push origin :dev
+
+
+
