@@ -44,6 +44,18 @@ $ git diff
 查看版本历史：
 $ git log
 
+查看简洁版本历史：
+$ git log --pretty=oneline
+
+回退到上一个版本：
+$ git reset --hard HEAD^
+
+回退到上上一个版本：
+$ git reset --hard HEAD^^
+
+回退到上两个版本：
+$ git reset --hard HEAD~2
+
 回退版本：
 $ git reset --hard b39ef...  //版本号没必要写全，前几位就可以了，Git会自动去找
 
@@ -64,11 +76,44 @@ $ git reset HEAD reaeme.txt
 
 
 
+生成密钥：
+$ ssh-keygen -t rsa -C "386276251@qq.com"
 
+关联远程仓库：
+$ git remote add origin git@github.com:pengjielee/git-learn.git
 
+首次推送：
+$ git push -u origin master
 
+每次推送最新修改：
+$ git push origin master
 
+从远程库克隆：
+$ git clone git@github.com:pengjielee/git-learn.git
 
+创建并切换分支：
+$ git checkout -b dev
 
+创建分支：
+$ git branch test
 
+切换分支：
+$ git checkout dev
 
+查看当前分支：
+$ git branch	//git branch命令会列出所有分支，当前分支前面会标一个*号
+
+合并分支：
+$ git merge dev //git merge命令用于合并指定分支到当前分支
+
+查看分支合并情况：
+$ git log --graph --pretty=oneline --abbrev-commit 
+
+查看分支合并图：
+$ git log --graph
+
+删除分支：
+$ git branch -d dev
+
+删除远程分支：
+$ git push origin :dev
