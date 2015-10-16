@@ -1,32 +1,16 @@
-1、在线地址
-
-git中文网站：
-http://www.git-scm.com/
-
-git简易指南：
-http://www.bootcss.com/p/git-guide/
-
-廖雪峰的官方网站：
-http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/
-
-github for windows：
-https://help.github.com/articles/getting-started-with-github-for-windows/
-
-
-2、git学习
 
 windows下安装git：
 http://msysgit.github.io/
 
 配置用户名和邮箱：
-$ git config --global user.name "your name"				// --global表示你这台机器上的所有git仓库都会使用这个配置
+$ git config --global user.name "your name"	// --global表示你这台机器上的所有git仓库都会使用这个配置
 $ git config --global user.email "email@example.com"
 
 
 创建版本库：
 $ mkdir temp		//创建空目录
-$ cd temp			//切换目录
-$ pwd				//显示当前目录
+$ cd temp		//切换目录
+$ pwd			//显示当前目录
 
 $ git init          //初始化版本库
 Initialized empty Git repository in d:/project/temp/.git/
@@ -43,6 +27,18 @@ $ git diff
 
 查看版本历史：
 $ git log
+
+查看简洁版本历史：
+$ git log --pretty=oneline
+
+回退到上一个版本：
+$ git reset --hard HEAD^
+
+回退到上上一个版本：
+$ git reset --hard HEAD^^
+
+回退到上两个版本：
+$ git reset --hard HEAD~2
 
 回退版本：
 $ git reset --hard b39ef...  //版本号没必要写全，前几位就可以了，Git会自动去找
@@ -62,13 +58,72 @@ $ git reset HEAD reaeme.txt
 删除文件：
 
 
+生成密钥：
+$ ssh-keygen -t rsa -C "386276251@qq.com"
+
+关联远程仓库：
+$ git remote add origin git@github.com:pengjielee/git-learn.git
+
+首次推送：
+$ git push -u origin master
+
+每次推送最新修改：
+$ git push origin master
+
+从远程库克隆：
+$ git clone git@github.com:pengjielee/git-learn.git
+
+创建并切换分支：
+$ git checkout -b dev
+
+创建分支：
+$ git branch test
+
+切换分支：
+$ git checkout dev
+
+查看当前分支：
+$ git branch	//git branch命令会列出所有分支，当前分支前面会标一个*号
+
+合并分支：
+$ git merge dev //git merge命令用于合并指定分支到当前分支
+//通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+
+合并分支：
+$ git merge --no-ff -m "merge with no-ff" dev //注意--no-ff参数，表示禁用Fast forward。
 
 
+//合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+
+查看分支合并情况：
+$ git log --graph --pretty=oneline --abbrev-commit 
+
+查看分支合并图：
+$ git log --graph
+
+删除分支：
+$ git branch -d dev
+
+删除远程分支：
+$ git push origin :dev
 
 
-
-
-
+参考资料：
+1、廖雪峰的官方网站
+http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/
+2、git使用简易指南
+http://www.bootcss.com/p/git-guide/
+3、使用git
+http://blog.jobbole.com/78960/
+http://www.cnblogs.com/tugenhua0707/p/4050072.html
+4、git官网
+http://www.git-scm.com/book/zh/v2
+5、git工具
+https://desktop.github.com/
+https://git-for-windows.github.io/
+http://www.syntevo.com/smartgit/
+https://tortoisegit.org/download/
+https://help.github.com/articles/getting-started-with-github-for-windows/
 
 
 
